@@ -21,7 +21,12 @@
 
 <br><br>
 
-<button class="btn btn-primary">Dodaj u korpu</button>
+ <form action="/add_to_cart" method="POST">
+     @csrf
+<input type="hidden" name="product_id" value= "{{$product['id']}}">
+
+ <button class="btn btn-primary">Dodaj u korpu</button>
+ </form>
 
 <br><br>
 
