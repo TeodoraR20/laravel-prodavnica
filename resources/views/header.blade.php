@@ -1,7 +1,19 @@
+<?php
+
+use App\Http\Controllers\ProductController;
+$total = 0;
+if(Session::has('user'))
+{
+  $total = ProductController::cartItem();
+}
+
+?>
+
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="/">Webshop</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
@@ -17,8 +29,24 @@
 
 <ul class="nav navbar-nav navbar-right">
 
-<li><a href="#">Cart(0)</a></li>
+<li><a href="#">Cart {{$total}}</a></li>
 
+@if(Session::has('user'))
+
+ <!-- Dropdown -->
+ <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       {{Session::get('user')['name']}}
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/logout">Logout</a>
+        
+      </div>
+    </li>
+@else 
+<li><a href="/login">Login</a></li>
+
+@endif
 </ul>
 
   </div>
