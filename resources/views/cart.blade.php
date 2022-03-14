@@ -40,7 +40,7 @@
 
 <div class="col-sm-3">
 
-<button class="btn btn-warning">Obrisi</button>
+<a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Obrisi</a>
 
 </a>
 

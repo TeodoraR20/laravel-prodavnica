@@ -32,6 +32,9 @@ Route::post("add_to_cart",[ProductController::class,'addToCart']);
 //cart umesto cartlist
 Route::get("cart",[ProductController::class,'cartList']);
 
+Route::get("removecart/{id}",[ProductController::class,'removeCart']);
+
+
 
 
 
