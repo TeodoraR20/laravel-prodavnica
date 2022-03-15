@@ -72,5 +72,20 @@ return redirect('cart');
 
 }
 
+
+function orderNow()
+{
+
+    $userId=Session::get('user')['id'];
+    $total =  $products = DB::table('cart')
+    ->join('products','cart.product_id','=','products.id')
+    ->where('cart.user_id',$userId)
+    
+    ->sum('products.price');
+    
+    return view('ordernow',['total'=>$total]);
+
+}
+
 }
 
