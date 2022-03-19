@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Cart;
+use App\Models\Order;
 use Session;
 use Illuminate\Support\Facades\DB;
 
@@ -86,6 +87,52 @@ function orderNow()
     return view('ordernow',['total'=>$total]);
 
 }
+
+function orderPlace(Request $req)
+{
+
+    $userId=Session::get('user')['id'];
+       $allCart = Cart::where('user_id',$userId)->get();    
+
+foreach($allCart as $cart)
+{
+
+$order = new Order;
+$order->product_id=$cart['product_id'];
+$order->user_id=$cart['user_id'];
+$order->status="pending";
+$order->payment_method=$req->payment;
+$order->payment_status="pending";
+$order->address=$req->address;
+$order->save();
+Cart::where('user_id',$userId)->delete();    
+
+}
+
+
+/*
+foreach($allCart as $cart)
+{
+$order = new Order;
+$order->product_id=$cart['product_id'];
+$order->user_id=$cart['user_id'];
+//status - delivered
+$order->status="pending";
+$order->payment_method=$req->payment;
+$order->payment_status="pending";
+$order->address=$req->address;
+$order->save();
+Cart::where('user_id',$userId)->delete();
+
+}
+
+     $req->input(); 
+return redirect('/');*/
+
+ $req->input();
+ return redirect('/');
+    }
+
 
 }
 
