@@ -24,7 +24,10 @@ Session::forget('user');
     return redirect('login');
 });
 
+Route::view('/register','register');
+
 Route::post("/login",[UserController::class,'login']);
+Route::post("/register",[UserController::class,'register']);
 Route::get("/",[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class,'detail']);
 Route::get("search",[ProductController::class,'search']);
