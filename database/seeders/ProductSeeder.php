@@ -20,41 +20,18 @@ class ProductSeeder extends Seeder
 
             [
 
-                'name'=>'LG mobile',
-                'price'=>"200",
-                'description'=>"A smart phone.",
-                'category'=>'mobile',
-                'gallery'=> "https://fdn2.gsmarena.com/vv/bigpic/lg-w41.jpg"
+                'name'=>'Covek po imenu Uve - Peter Handke',
+                'price'=>"1099",
+                'description'=>"
+                Izvanredno! Smejaćete se, plakati i otkriti saosećanje za džangrizala u svom životu. Takođe, poželećete da se odselite u Skandinaviju, gde je sve nekako simpatičnije.“ People",
+                'category'=>'komedija',
+                'gallery'=> "https://www.laguna.rs/_img/korice/3366/covek_po_imenu_uve_v.jpg"
                 
-            ],
+            ]
 
-            [
+            
 
-                'name'=>'LG telefon',
-                'price'=>"200",
-                'description'=>"A smart phone.",
-                'category'=>'mobile',
-                'gallery'=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNjUMh0aV7qgGpElb_YOe_7pQg644oIXdf2Q&usqp=CAU"
-            ],
-             [
-                //https://images.kupujemprodajem.com//photos/oglasi/6/80/71894806/big-71894806_5c3ee8b1359044-60218952UJ670V-940x620.jpg
-               
-                'name'=>'LG tv',
-                'price'=>"200",
-                'description'=>"A smart phone.",
-                'category'=>'mobile',
-               'gallery'=>"https://images.kupujemprodajem.com//photos/oglasi/6/80/71894806/big-71894806_5c3ee8b1359044-60218952UJ670V-940x620.jpg"
-                
-            ],
-
-            [
-              
-                'name'=>'LG klima',
-                'price'=>"200",
-                'description'=>"A smart phone.",
-                'category'=>'mobile',
-                'gallery'=>"https://www.lg.com/africa/images/split-air-conditioners/md06099357/gallery/medium02.jpg"
-                        ]
+            
 
         ]);
     }
