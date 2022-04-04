@@ -16,17 +16,18 @@ if(Session::has('user'))
       <a class="navbar-brand" href="/">Webshop</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+     <!-- <li class="active"><a href="#">Home</a></li> -->
       <li><a href="/myorders">Orders</a></li>
       
     </ul>
+    <!--
     <form class="navbar-form navbar-left" >
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
-
+-->
 <ul class="nav navbar-nav navbar-right">
 
 <li><a href="/cart">Cart {{$total}}</a></li>
@@ -45,7 +46,7 @@ if(Session::has('user'))
     </li>
 @else 
 <li><a href="/login">Login</a></li>
-<li><a href="/register">Register</a></li>
+<li><a href="/register">Registracija</a></li>
 
 @endif
 </ul>

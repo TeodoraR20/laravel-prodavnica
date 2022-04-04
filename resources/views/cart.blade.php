@@ -11,7 +11,7 @@
 
 <h4>Result for products</h4>
 
-<a class="btn btn-success" href="ordernow">Order now</a> <br> <br> 
+<a class="btn btn-success" href="ordernow">Naruci</a> <br> <br> 
 @foreach ($products as $item)
 
 <div class=" row searched-item cart-list-devider">
@@ -53,7 +53,7 @@
 @endforeach
 
 </div>
-<a class="btn btn-success" href="ordernow">Order now</a> <br> <br>
+<a class="btn btn-success" href="ordernow">Naruci</a> <br> <br>
 
 </div>
 

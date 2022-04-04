@@ -12,7 +12,7 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
-  <!-- Wrapper for slides -->
+  <!-- Wrapper for slides 
   <div class="carousel-inner">
     
 @foreach ($products as $item)
@@ -33,8 +33,8 @@
 
 @endforeach
   </div>
-
-  <!-- Left and right controls -->
+-->
+  <!-- Left and right controls 
   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
     <span class="sr-only">Previous</span>
@@ -44,10 +44,10 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+-->
 <div class="trending-wrapper">
 
-<h3>Trending products</h3>
+<h3>Knjige</h3>
 
 @foreach ($products as $item)
 
